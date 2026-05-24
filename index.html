@@ -848,6 +848,102 @@ html{
   }
 
 }
+  /* ================= LATEST UPDATES ================= */
+
+.latest-updates{
+  padding:90px 6%;
+  background:#fff;
+}
+
+.updates-heading{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:45px;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+.updates-heading h2{
+  font-size:46px;
+  font-weight:800;
+  color:#111;
+}
+
+.updates-heading a{
+  text-decoration:none;
+  color:#ffbf00;
+  font-size:18px;
+  font-weight:600;
+}
+
+.updates-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:30px;
+}
+
+.update-card{
+  background:#fff;
+  border-radius:30px;
+  overflow:hidden;
+  box-shadow:0 10px 35px rgba(0,0,0,0.08);
+  transition:0.4s;
+}
+
+.update-card:hover{
+  transform:translateY(-10px);
+}
+
+.update-image img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+}
+
+.update-content{
+  padding:28px;
+}
+
+.update-content span{
+  display:inline-block;
+  padding:8px 18px;
+  background:#fff4c7;
+  color:#c58b00;
+  border-radius:40px;
+  font-size:13px;
+  font-weight:600;
+  margin-bottom:18px;
+}
+
+.update-content h3{
+  font-size:28px;
+  line-height:1.5;
+  margin-bottom:16px;
+  color:#111;
+}
+
+.update-content p{
+  color:#666;
+  line-height:1.9;
+  margin-bottom:22px;
+  font-size:15px;
+}
+
+.update-content a{
+  text-decoration:none;
+  color:#ffbf00;
+  font-weight:600;
+  font-size:16px;
+}
+
+@media(max-width:768px){
+
+  .updates-heading h2{
+    font-size:34px;
+  }
+
+}
 </style>
 
 </head>
@@ -1185,6 +1281,104 @@ html{
       <h3>BBAU</h3>
 
       <p>Babasaheb Bhimrao Ambedkar University</p>
+
+    </div>
+
+  </div>
+
+</section>
+  <!-- ================= LATEST UPDATES ================= -->
+
+<section class="latest-updates">
+
+  <div class="updates-heading">
+
+    <h2>Latest Updates</h2>
+
+    <a href="#">View All →</a>
+
+  </div>
+
+  <div class="updates-container">
+
+    <!-- UPDATE 1 -->
+    <div class="update-card">
+
+      <div class="update-image">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200">
+      </div>
+
+      <div class="update-content">
+
+        <span>CUET 2025</span>
+
+        <h3>
+          CUET UG 2025 Registration Started
+        </h3>
+
+        <p>
+          Complete registration process, exam date and syllabus updates.
+        </p>
+
+        <a href="#">
+          Read More →
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- UPDATE 2 -->
+    <div class="update-card">
+
+      <div class="update-image">
+        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1200">
+      </div>
+
+      <div class="update-content">
+
+        <span>SSC EXAM</span>
+
+        <h3>
+          SSC CGL New Notification Released
+        </h3>
+
+        <p>
+          Check eligibility, vacancy details and official notification PDF.
+        </p>
+
+        <a href="#">
+          Read More →
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- UPDATE 3 -->
+    <div class="update-card">
+
+      <div class="update-image">
+        <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=1200">
+      </div>
+
+      <div class="update-content">
+
+        <span>ADMISSION</span>
+
+        <h3>
+          Delhi University Admission Portal Live
+        </h3>
+
+        <p>
+          UG and PG admission process has officially started now.
+        </p>
+
+        <a href="#">
+          Read More →
+        </a>
+
+      </div>
 
     </div>
 
