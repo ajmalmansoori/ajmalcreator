@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Learnify Classes</title>
+
+<!-- POPPINS -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#fafafa;
+  overflow-x:hidden;
+  color:#111;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+  width:100%;
+  height:90px;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 6%;
+  position:sticky;
+  top:0;
+  z-index:999;
+  box-shadow:0 5px 25px rgba(0,0,0,0.06);
+}
+
+.nav-left{
+  display:flex;
+  align-items:center;
+  gap:55px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:36px;
+  font-weight:800;
+  color:#111;
+}
+
+.logo i{
+  color:#ffbf00;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:35px;
+  list-style:none;
+}
+
+.nav-links li{
+  position:relative;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#111;
+  font-weight:600;
+  transition:.3s;
+}
+
+.nav-links a:hover{
+  color:#ffbf00;
+}
+
+.active{
+  color:#ffbf00 !important;
+  position:relative;
+}
+
+.active::after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:-10px;
+  width:100%;
+  height:3px;
+  background:#ffbf00;
+  border-radius:10px;
+}
+
+/* ================= DROPDOWN ================= */
+
+.dropdown{
+  position:absolute;
+  top:45px;
+  left:0;
+  width:230px;
+  background:#fff;
+  border-radius:22px;
+  padding:12px 0;
+  display:none;
+  box-shadow:0 15px 45px rgba(0,0,0,0.12);
+}
+
+.dropdown a{
+  display:block;
+  padding:14px 22px;
+  font-size:15px;
+}
+
+.dropdown a:hover{
+  background:#fff4c7;
+}
+
+.more:hover .dropdown{
+  display:block;
+}
+
+/* ================= SEARCH ================= */
+
+.search-box{
+  width:340px;
+  height:56px;
+  background:#f5f5f5;
+  border-radius:60px;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+}
+
+.search-box input{
+  width:100%;
+  height:100%;
+  border:none;
+  outline:none;
+  background:transparent;
+  padding:0 22px;
+  font-size:15px;
+}
+
+.search-btn{
+  width:65px;
+  height:56px;
+  border:none;
+  background:#ffbf00;
+  color:#fff;
+  cursor:pointer;
+  font-size:18px;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  width:100%;
+  min-height:720px;
+
+  background:
+  linear-gradient(rgba(255,248,220,0.72),rgba(255,248,220,0.72)),
+  url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600");
+
+  background-size:1280px 720px;
+  background-position:center;
+  background-repeat:no-repeat;
+
+  position:relative;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(to right,
+  rgba(255,248,220,0.96) 35%,
+  rgba(255,248,220,0.55) 65%,
+  rgba(255,248,220,0.10) 100%);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  width:55%;
+  padding-left:6%;
+}
+
+.small-tag{
+  display:inline-block;
+  padding:12px 24px;
+  background:#fff1b9;
+  border-radius:50px;
+  color:#c58b00;
+  font-size:15px;
+  font-weight:600;
+  margin-bottom:28px;
+}
+
+.hero-content h1{
+  font-size:90px;
+  line-height:1.02;
+  font-weight:800;
+  margin-bottom:30px;
+}
+
+.hero-content h1 span{
+  color:#ffbf00;
+}
+
+.hero-content p{
+  max-width:720px;
+  font-size:20px;
+  color:#555;
+  line-height:2;
+  margin-bottom:42px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:22px;
+}
+
+.btn{
+  padding:18px 42px;
+  border:none;
+  border-radius:60px;
+  font-size:17px;
+  font-weight:600;
+  cursor:pointer;
+  transition:.4s;
+}
+
+.btn-yellow{
+  background:#ffbf00;
+  color:#111;
+  box-shadow:0 10px 35px rgba(255,191,0,0.35);
+}
+
+.btn-yellow:hover{
+  transform:translateY(-5px);
+}
+
+.btn-white{
+  background:#fff;
+  border:2px solid #ffbf00;
+}
+
+/* ================= SECTION TITLE ================= */
+
+.section-title{
+  font-size:42px;
+  font-weight:800;
+  margin-bottom:35px;
+}
+
+/* ================= TEST SERIES ================= */
+
+.test-series{
+  background:#fff8df;
+  padding:55px 6%;
+}
+
+.slider-box{
+  width:1280px;
+  height:320px;
+  max-width:100%;
+  margin:auto;
+  border-radius:30px;
+  overflow:hidden;
+  box-shadow:0 15px 45px rgba(0,0,0,0.10);
+}
+
+.slides{
+  display:flex;
+  width:400%;
+  animation:slide 20s infinite;
+}
+
+.slide{
+  width:100%;
+  flex-shrink:0;
+}
+
+.slide img{
+  width:1280px;
+  height:320px;
+  object-fit:cover;
+}
+
+@keyframes slide{
+
+  0%{transform:translateX(0);}
+  20%{transform:translateX(0);}
+  25%{transform:translateX(-100%);}
+  45%{transform:translateX(-100%);}
+  50%{transform:translateX(-200%);}
+  70%{transform:translateX(-200%);}
+  75%{transform:translateX(-300%);}
+  95%{transform:translateX(-300%);}
+  100%{transform:translateX(0);}
+
+}
+
+/* ================= FEATURES ================= */
+
+.features{
+  padding:60px 6%;
+}
+
+.feature-container{
+  background:#fff;
+  border-radius:30px;
+  padding:35px;
+  display:flex;
+  gap:25px;
+  justify-content:space-between;
+  overflow-x:auto;
+  box-shadow:0 10px 35px rgba(0,0,0,0.06);
+}
+
+.feature-box{
+  min-width:230px;
+  display:flex;
+  gap:15px;
+  align-items:flex-start;
+}
+
+.feature-icon{
+  min-width:70px;
+  height:70px;
+  background:#ffbf00;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  color:#111;
+}
+
+.feature-text h3{
+  font-size:20px;
+  margin-bottom:8px;
+}
+
+.feature-text p{
+  color:#666;
+  line-height:1.7;
+  font-size:14px;
+}
+
+/* ================= COURSES ================= */
+
+.courses{
+  padding:70px 6%;
+}
+
+.course-slider{
+  display:flex;
+  gap:25px;
+  overflow-x:auto;
+  padding-bottom:10px;
+}
+
+.course-card{
+  min-width:320px;
+  background:#fff;
+  border-radius:25px;
+  overflow:hidden;
+  box-shadow:0 10px 35px rgba(0,0,0,0.08);
+  transition:.4s;
+}
+
+.course-card:hover{
+  transform:translateY(-10px);
+}
+
+.course-card img{
+  width:100%;
+  height:190px;
+  object-fit:cover;
+}
+
+.course-content{
+  padding:24px;
+}
+
+.course-content h3{
+  font-size:24px;
+  margin-bottom:10px;
+}
+
+.course-content p{
+  color:#666;
+  line-height:1.8;
+  margin-bottom:18px;
+}
+
+.price{
+  color:red;
+  font-size:24px;
+  font-weight:700;
+}
+
+/* ================= EXPLORE ================= */
+
+.explore{
+  background:#fff7df;
+  padding:90px 6%;
+  text-align:center;
+  margin-top:60px;
+}
+
+.explore h2{
+  font-size:56px;
+  margin-bottom:25px;
+  font-weight:800;
+}
+
+.explore p{
+  max-width:900px;
+  margin:auto;
+  color:#555;
+  line-height:2;
+  font-size:18px;
+}
+
+.explore .btn{
+  margin-top:35px;
+}
+
+/* ================= FOOTER ================= */
+
+.premium-footer{
+  background:#f3f3f3;
+  padding:90px 6% 40px;
+  margin-top:80px;
+}
+
+.footer-container{
+  display:flex;
+  justify-content:space-between;
+  gap:80px;
+  flex-wrap:wrap;
+}
+
+.footer-left{
+  max-width:420px;
+}
+
+.footer-logo img{
+  width:95px;
+  height:95px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:30px;
+}
+
+.footer-left h2{
+  font-size:42px;
+  line-height:1.4;
+  margin-bottom:40px;
+  font-weight:700;
+  color:#111827;
+}
+
+.app-buttons{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+.app-buttons img{
+  width:200px;
+}
+
+.footer-right{
+  display:flex;
+  gap:110px;
+  flex-wrap:wrap;
+}
+
+.footer-column{
+  display:flex;
+  flex-direction:column;
+}
+
+.footer-column h3{
+  font-size:28px;
+  margin-bottom:30px;
+  color:#111827;
+}
+
+.footer-column a{
+  text-decoration:none;
+  color:#6b7280;
+  margin-bottom:18px;
+  font-size:20px;
+  transition:0.3s;
+}
+
+.footer-column a:hover{
+  color:#ffbf00;
+}
+
+.footer-bottom{
+  margin-top:70px;
+  padding-top:35px;
+  border-top:1px solid #d1d5db;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+.footer-links{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+.footer-links a{
+  text-decoration:none;
+  color:#6b7280;
+  font-size:20px;
+}
+
+.footer-social{
+  display:flex;
+  gap:18px;
+}
+
+.footer-social a{
+  width:55px;
+  height:55px;
+  border:1px solid #d1d5db;
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#374151;
+  font-size:22px;
+  text-decoration:none;
+  transition:0.4s;
+}
+
+.footer-social a:hover{
+  background:#ffbf00;
+  color:#fff;
+  border-color:#ffbf00;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1300px){
+
+  .slider-box{
+    width:100%;
+    height:auto;
+  }
+
+  .slide img{
+    width:100%;
+    height:auto;
+  }
+
+}
+
+@media(max-width:1100px){
+
+  .hero{
+    background-size:cover;
+  }
+
+  .hero-content{
+    width:100%;
+    padding:100px 7%;
+  }
+
+  .hero-content h1{
+    font-size:60px;
+  }
+
+}
+
+@media(max-width:900px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .search-box{
+    width:200px;
+  }
+
+  .hero-content h1{
+    font-size:45px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+  }
+
+  .btn{
+    width:100%;
+  }
+
+  .explore h2{
+    font-size:40px;
+  }
+
+}
+
+@media(max-width:700px){
+
+  .footer-left h2{
+    font-size:30px;
+  }
+
+  .footer-column h3{
+    font-size:22px;
+  }
+
+  .footer-column a{
+    font-size:17px;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+  <div class="nav-left">
+
+    <div class="logo">
+      <i class="fa-solid fa-book-open"></i>
+      Learnify
+    </div>
+
+    <ul class="nav-links">
+
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">Courses</a></li>
+      <li><a href="#">Test</a></li>
+      <li><a href="#">Store</a></li>
+      <li><a href="#">Book</a></li>
+
+      <li class="more">
+
+        <a href="#">
+          More <i class="fa-solid fa-angle-down"></i>
+        </a>
+
+        <div class="dropdown">
+
+          <a href="#"><i class="fa-brands fa-youtube"></i> Free Video</a>
+          <a href="#"><i class="fa-solid fa-video"></i> Free Lecture</a>
+          <a href="#"><i class="fa-solid fa-link"></i> Imp Link</a>
+          <a href="#"><i class="fa-solid fa-phone"></i> Contact Us</a>
+
+        </div>
+
+      </li>
+
+    </ul>
+
+  </div>
+
+  <div class="search-box">
+
+    <input type="text" placeholder="Search for courses, tests and more...">
+
+    <button class="search-btn">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+
+  </div>
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+
+    <div class="small-tag">
+      India's Premium Learning Platform
+    </div>
+
+    <h1>
+      Learn
+      <br>
+      Smarter.
+      <br>
+      Achieve
+      <span>Bigger.</span>
+    </h1>
+
+    <p>
+      Get access to top-quality courses, test series,
+      notes, PDFs, mock tests and live classes —
+      all in one place.
+    </p>
+
+    <div class="hero-buttons">
+
+      <button class="btn btn-yellow">
+        Get Started →
+      </button>
+
+      <button class="btn btn-white">
+        📋 Test Series
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= TEST SERIES ================= -->
+
+<section class="test-series">
+
+  <h2 class="section-title">
+    Test Series
+  </h2>
+
+  <div class="slider-box">
+
+    <div class="slides">
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600">
+      </div>
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1600">
+      </div>
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1600">
+      </div>
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=1600">
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</body>
+</html>
