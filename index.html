@@ -768,6 +768,86 @@ html{
   }
 
 }
+  /* ================= UNIVERSITY SECTION ================= */
+
+.universities{
+  padding:85px 6%;
+  background:#fff8df;
+}
+
+.university-heading{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:40px;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+.university-heading h2{
+  font-size:46px;
+  font-weight:800;
+  color:#111;
+}
+
+.university-heading a{
+  text-decoration:none;
+  color:#ffbf00;
+  font-weight:600;
+  font-size:18px;
+}
+
+.university-slider{
+  display:flex;
+  gap:28px;
+  overflow-x:auto;
+  padding-bottom:10px;
+}
+
+.university-card{
+  min-width:260px;
+  background:#fff;
+  border-radius:28px;
+  padding:35px 25px;
+  text-align:center;
+  box-shadow:0 10px 35px rgba(0,0,0,0.08);
+  transition:0.4s;
+}
+
+.university-card:hover{
+  transform:translateY(-10px);
+}
+
+.university-card img{
+  width:95px;
+  height:95px;
+  object-fit:contain;
+  margin-bottom:25px;
+}
+
+.university-card h3{
+  font-size:24px;
+  margin-bottom:12px;
+  color:#111;
+}
+
+.university-card p{
+  color:#666;
+  line-height:1.7;
+  font-size:15px;
+}
+
+@media(max-width:768px){
+
+  .university-heading h2{
+    font-size:34px;
+  }
+
+  .university-card{
+    min-width:220px;
+  }
+
+}
 </style>
 
 </head>
@@ -1022,6 +1102,89 @@ html{
         </div>
 
       </div>
+
+    </div>
+
+  </div>
+
+</section>
+  <!-- ================= UNIVERSITY LIST ================= -->
+
+<section class="universities">
+
+  <div class="university-heading">
+
+    <h2>Top Universities</h2>
+
+    <a href="#">Explore All →</a>
+
+  </div>
+
+  <div class="university-slider">
+
+    <!-- UNIVERSITY 1 -->
+    <div class="university-card">
+
+      <img src="https://upload.wikimedia.org/wikipedia/en/5/58/University_of_Delhi_Logo.svg">
+
+      <h3>Delhi University</h3>
+
+      <p>Top Central University in India</p>
+
+    </div>
+
+    <!-- UNIVERSITY 2 -->
+    <div class="university-card">
+
+      <img src="https://upload.wikimedia.org/wikipedia/en/8/8b/Banaras_Hindu_University_crest.svg">
+
+      <h3>BHU</h3>
+
+      <p>Banaras Hindu University</p>
+
+    </div>
+
+    <!-- UNIVERSITY 3 -->
+    <div class="university-card">
+
+      <img src="https://upload.wikimedia.org/wikipedia/en/2/2c/University_of_Lucknow_logo.png">
+
+      <h3>Lucknow University</h3>
+
+      <p>Premier State University</p>
+
+    </div>
+
+    <!-- UNIVERSITY 4 -->
+    <div class="university-card">
+
+      <img src="https://upload.wikimedia.org/wikipedia/en/7/7d/Aligarh_Muslim_University_logo.svg">
+
+      <h3>AMU</h3>
+
+      <p>Aligarh Muslim University</p>
+
+    </div>
+
+    <!-- UNIVERSITY 5 -->
+    <div class="university-card">
+
+      <img src="https://upload.wikimedia.org/wikipedia/en/6/6f/Jawaharlal_Nehru_University_Logo.png">
+
+      <h3>JNU</h3>
+
+      <p>Jawaharlal Nehru University</p>
+
+    </div>
+
+    <!-- UNIVERSITY 6 -->
+    <div class="university-card">
+
+      <img src="https://upload.wikimedia.org/wikipedia/en/f/f0/Babasaheb_Bhimrao_Ambedkar_University_logo.png">
+
+      <h3>BBAU</h3>
+
+      <p>Babasaheb Bhimrao Ambedkar University</p>
 
     </div>
 
